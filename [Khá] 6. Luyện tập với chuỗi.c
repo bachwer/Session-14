@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 int main(void) {
     char string[1000];
     int  count = 0;
@@ -8,7 +9,7 @@ int main(void) {
     fgets(string, 1000, stdin);
     int n = strlen(string);
     for(int i = 0; i < n ; i++) {
-      if(string[i] == ' '){
+      if(string[i] == ' ' || (isdigit(string[i]))){
           check = 0;
        }else{
            check = 1;
